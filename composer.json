@@ -1,0 +1,22 @@
+{
+    "name": "jeepmac/pinyinslug",
+    "description": "Get Pinyin from Chinese, or translate to English.",
+    "keywords": ["Chinese", "Pinyin", "Slug", "Tag", "Bing Translate"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jeepmac",
+            "email": "jeepmac@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jeepmac\\Pinyinslug": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
