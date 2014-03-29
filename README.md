@@ -30,9 +30,9 @@ Next, add the service provider to `app/config/app.php`.
 That's it! You're good to go.
 
 Here is a little example:
-
+```php
 $str = Pinyinslug::ats_pinyin('生活 in Shanghai');
-
+```
 $str will turn to be 'sheng-huo--in-shanghai'.
 
 Then I added Bing Translation function. You need to apply client id from Microsoft. 
