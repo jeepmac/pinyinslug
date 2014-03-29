@@ -1,6 +1,6 @@
 pinyinslug
 ==========
-Tags: Chinese, Pinyin, tag, slug, URL, rewrite, Bing, permalink, SEO, 标签, 别名
+Tags: Chinese, Pinyin, tag, slug, URL, rewrite, Bing, permalink, SEO, 标签, 别名, PHP, Laravel
 
 Generate URL-friendly slug, post title. Chinese to Pinyin. Tested on Laravel. 
 
@@ -35,4 +35,4 @@ $str = Pinyinslug::ats_pinyin('生活 in Shanghai');
 ```
 $str will turn to be 'sheng-huo--in-shanghai'.
 
-Then I added Bing Translation function. You need to apply client id from Microsoft. 
+Then I added Bing Translation function. You need to apply client id from Microsoft if you want to 'English' instead of 'pinyin'. 
