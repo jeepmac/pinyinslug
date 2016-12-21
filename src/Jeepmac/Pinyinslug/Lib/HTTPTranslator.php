@@ -17,7 +17,7 @@ Class HTTPTranslator {
      * @return string.
      *
      */
-    function curlRequest($url, $authHeader) {
+    public function curlRequest($url, $authHeader) {
         //Initialize the Curl Session.
         $ch = curl_init();
         //Set the Curl url.

@@ -8,9 +8,9 @@ use Config;
 
 class Pinyinslug {
 
-	function ats_pinyin($slug) {
+	public function ats_pinyin($slug) {
 		
-		$engine = Config::get('pinyinslug::engine');
+		$engine = config('pinyinslug.engine');
 		if ($engine == 'pinyin') {
 			$pinyinObj = new Pinyin();
 
@@ -20,9 +20,9 @@ class Pinyinslug {
 		} else {
 			try {
 			    //Client ID of the application.
-			    $clientID       = Config::get('pinyinslug::clientID');
+			    $clientID       = config('pinyinslug.clientID');
 			    //Client Secret key of the application.
-			    $clientSecret = Config::get('pinyinslug::clientSecret');
+			    $clientSecret = config('pinyinslug.clientSecret');
 			    //OAuth Url.
 			    $authUrl      = "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13/";
 			    //Application Scope Url

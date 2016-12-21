@@ -1,7 +1,6 @@
 <?php namespace Jeepmac\Pinyinslug;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Foundation\AliasLoader;
 
 class PinyinslugServiceProvider extends ServiceProvider {
 
@@ -19,9 +18,8 @@ class PinyinslugServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('jeepmac/pinyinslug');
-
-		AliasLoader::getInstance()->alias('Pinyinslug', 'Jeepmac\Pinyinslug\Facades\PinyinslugFacade');
+		$this->app->alias('Pinyinslug', 'Jeepmac\Pinyinslug\Facades\PinyinslugFacade');
+		$this->app->alias(Pinyinslug::class, 'pinyinslug');
 	}
 
 	/**
@@ -31,10 +29,7 @@ class PinyinslugServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['pinyinslug'] = $this->app->share(function($app)
-		{
-			return new Pinyinslug;
-		});
+		$this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'pinyinslug');
 	}
 
 	/**

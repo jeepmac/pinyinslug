@@ -8,7 +8,7 @@ class Pinyin {
 
     var $pinyin = array();
 
-    function __construct() {
+    public function __construct() {
         $this->pinyin=array(
         "A"=>array(59371,41648,50400,33157,41392,18661,47599),
         "Ai"=>array(19697,32178,35504,36856,20712,25068,28663,26608,29399,19381,17099,47497,30339,43240,54250,56459,45201,25005,57749,17131,36057,28596,49375,29162,55685,31713,27114,64665,19190,56536,37508,22145,59104,42373,18930,17311,30185,29599,54922,60552,35971,19670,27069,47505,56476,52365,63875,43184,17031,45460,45466,43440,32176,44464,57310,36230,41904,42672,42928,42416,42160,18330,22758,52719,58012,27797,45716,44208,44720,23788,45302,25559,49645,30387,51430,56208,24969,51680,44976,16588,46209,43696,43952,18334,57994,29916,51424,34439),
@@ -526,7 +526,7 @@ class Pinyin {
      * @param string $s
      * @return string
      */
-    function stringToPinyin($s){
+    public function stringToPinyin($s){
         $s=preg_replace("/\s/is","_",$s);
         $pinyin="";
         if ($s == "") {
@@ -560,7 +560,7 @@ class Pinyin {
         return strtolower($pinyin);
     }
     
-    function asc2ToPinyin($asc2){
+    public function asc2ToPinyin($asc2){
         $pinyin = $this->pinyin;
         foreach($pinyin as $value){
             if(array_search($asc2,$value)===false){

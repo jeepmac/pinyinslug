@@ -13,7 +13,7 @@ class AccessTokenAuthentication {
      *
      * @return string.
      */
-    function getTokens($grantType, $scopeUrl, $clientID, $clientSecret, $authUrl){
+    public function getTokens($grantType, $scopeUrl, $clientID, $clientSecret, $authUrl){
         try {
             //Initialize the Curl Session.
             $ch = curl_init();
